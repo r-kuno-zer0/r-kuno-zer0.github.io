@@ -1,70 +1,23 @@
-<html>
 
+<!doctype html>
+<html lang="en">
 <head>
+<!-- Required meta tags -->
 <meta charset="utf-8">
-<link rel="stylesheet" type="text/css" href="./css/style.css">
-<title>This is test.</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+ 
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+ 
+<title>Hello, world!</title>
 </head>
 <body>
-       
-
-        <p id="tabcontrol">
-                <a href="#tabpage1">タブ1</a>
-                <a href="#tabpage2">タブ2</a>
-                <a href="#tabpage3">タブ3</a>
-             </p>
-             <div id="tabbody">
-                <div id="tabpage1">…… タブ1の中身 ……</div>
-                <div id="tabpage2">…… タブ2の中身 ……</div>
-                <div id="tabpage3">…… タブ3の中身 ……</div>
-             </div>
-
-             <script type="text/javascript">
-                // ---------------------------
-                // ▼A：対象要素を得る
-                // ---------------------------
-                var tabs = document.getElementById('tabcontrol').getElementsByTagName('a');
-                var pages = document.getElementById('tabbody').getElementsByTagName('div');
-                
-                // ---------------------------
-                // ▼B：タブの切り替え処理
-                // ---------------------------
-                function changeTab() {
-                   // ▼B-1. href属性値から対象のid名を抜き出す
-                   var targetid = this.href.substring(this.href.indexOf('#')+1,this.href.length);
-                
-                   // ▼B-2. 指定のタブページだけを表示する
-                   for(var i=0; i<pages.length; i++) {
-                      if( pages[i].id != targetid ) {
-                         pages[i].style.display = "none";
-                      }
-                      else {
-                         pages[i].style.display = "block";
-                      }
-                   }
-                
-                   // ▼B-3. クリックされたタブを前面に表示する
-                   for(var i=0; i<tabs.length; i++) {
-                      tabs[i].style.zIndex = "0";
-                   }
-                   this.style.zIndex = "10";
-                
-                   // ▼B-4. ページ遷移しないようにfalseを返す
-                   return false;
-                }
-                
-                // ---------------------------
-                // ▼C：すべてのタブに対して、クリック時にchangeTab関数が実行されるよう指定する
-                // ---------------------------
-                for(var i=0; i<tabs.length; i++) {
-                   tabs[i].onclick = changeTab;
-                }
-                
-                // ---------------------------
-                // ▼D：最初は先頭のタブを選択しておく
-                // ---------------------------
-                tabs[0].onclick();
-                
-                </script>
+<h1>Hello, world!</h1>
+ 
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>
 </html>
