@@ -1,0 +1,12 @@
+@keyframes typing { from { width: 0; } }
+@keyframes caret { 50% { border-color: transparent; } }
+
+p {
+font-family: monospace; 
+width: 20ch;
+border-right: .08em solid;
+overflow: hidden;
+font-size: 4em;
+white-space: nowrap;
+animation: typing 1s steps(1, end), caret .0.5s step-end infinite;
+}
