@@ -140,6 +140,39 @@
 <br>
 <p>機能：飲んだ人、飲んだ薬の種類、飲んだタイミングをamazonechoを用いてデータの保存を行い、一か月ごとなどのレポートの作成を行う。</p>
 <br>
+<p>会話例(まず、くすりが新規か継続かを聞いて、その後記録を行いたいのか報告を聞きたいのかを判断する)</p>
+<br>
+<p>たろう「アレクサ、くすりのかんり開いて」</p>
+<p><font color="blue">アレクサ「お名前を教えてください」</font></p>
+<p><font color="green">たろう「たろうです」</font></p>
+<p><font color="blue">アレクサ「たろうさん、新規ですか、継続ですか教えてください」</font></p>
+<br>
+<p>新規の場合</p>
+<p><font color="green">たろう「新規です」</font></p>
+<p><font color="blue">アレクサ「くすりの名前を教えてください」</font></p>
+<p><font color="green">たろう「風邪薬です」</font></p>
+<p><font color="blue">アレクサ「薬を飲むタイミングを教えてください」</font></p>
+<p><font color="green">たろう「朝と夜です」</font></p>
+<br>
+<p>継続の場合</p>
+<p><font color="green">たろう「継続です」</font></p>
+<p><font color="blue">アレクサ「くすりの名前を教えてください」</font></p>
+<p><font color="green">たろう「風邪薬です」</font></p>
+<br>
+<p><font color="blue">アレクサ「記録ですか、報告ですか」</font></p>
+<br>
+<p>記録の場合</p>
+<p><font color="green">たろう「記録です」</font></p>
+<p><font color="blue">アレクサ「今日は薬はいつ飲みましたか」</font></p>
+<p><font color="green">たろう「朝です」</font></p>
+<p><font color="blue">アレクサ「記録しました、明日もちゃんと飲みましょう」</font></p>
+<br>
+<p>報告の場合</p>
+<p><font color="green">たろう「報告です」</font></p>
+<p><font color="blue">アレクサ「何月分の報告ですか」</font></p>
+<p><font color="green">たろう「七月分です」</font></p>
+<p><font color="blue">アレクサ「七月は朝は60%、夜は70%飲めました。報告を終わります。」</font></p>
+<br>
 <p><b>使用技術：JavaScript、AWS lambda、AWS dynamoDB</b></p>
 <br>
 <h2 id="unity">◎Unity</h2>
