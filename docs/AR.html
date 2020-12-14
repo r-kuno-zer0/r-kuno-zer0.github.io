@@ -10,7 +10,9 @@
     <a-scene 
         embedded arjs="debugUIEnabled:false; sourceType: webcam;" 
         vr-mode-ui="enabled: false">
-
+        <a-assets>
+           <img id="testid" src="./test.png">
+        </a-assets>
         <a-marker 
             type="pattern" 
             preset="custom" 
@@ -42,9 +44,7 @@
             </a-entity>
         -->
             <!-- 画像の表示-->
-            <a-assets>
-                <img id="testid" src="./test.png">
-            </a-assets>
+            
             <a-image id="testid" src="./test.png" position="0 0 0" rotation="-90 0 0"></a-image>
             <!-- 上部の文字列表示用パネル -->
             <a-box 
