@@ -15,7 +15,7 @@
             type="pattern" 
             preset="custom" 
             url="./pattern-AR.patt">
-        
+            <!-- この上のURLがマーカーだけど精度上げる必要がありそう-->       
           <!--  
             <a-entity 
                 gltf-model=”url(./objects/Mouse_01.gltf)” 
@@ -42,12 +42,10 @@
             </a-entity>
         -->
             <!-- 画像の表示-->
-            <a-entity 
-                gltf-model=”url(./test.png)” 
-                position="3 1 -1.5" 
-                rotation="0 0 0" 
-                scale="2 2 2"
-            </a-entity>
+            <a-assets>
+                <img id="testid" src="./test.png">
+            </a-assets>
+            <a-image id="testid" src="./test.png" position="0 0 0" rotation="-90 0 0"></a-image>
             <!-- 上部の文字列表示用パネル -->
             <a-box 
                 color="tomato" 
